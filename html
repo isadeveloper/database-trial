@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Remittance and Migration Database</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.css">
+
+    <style>
+      body {
+        background-color: black;
+      }
+      
+      .container-main {
+        background-color: lightgrey;
+        margin-left:15%;
+        margin-right:15%;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      
+      #table {
+        background-color: white;
+        font-size:100%;
+        overflow: scroll;
+        margin-top: 30%;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container-main">
+      <table id="table" data-url= "https://raw.githubusercontent.com/isadeveloper/database-trial/master/heritage_index_econ_freedom.json">
+        <thead>
+          <tr>
+            <th data-field="name">Name</th>
+            <th data-field="index_year">Index Year</th>
+            <th data-field="overall_score">Overall Score</th>
+            <th data-field="property_rights">Property Rights</th>
+            <th data-field="government_integrity">Government Integrity</th>
+            <th data-field="judicial_effectiveness">Judicial Effectiveness</th>
+            <th data-field="tax_burden">Tax Burden</th>
+            <th data-field="government_spending">Governtment Spending</th>
+            <th data-field="fiscal_health">Fiscal Health</th>
+            <th data-field="business_freedom">Business Freedom</th>
+            <th data-field="labour_freedom">Labour Freedom</th>
+            <th data-field="monetary_freedom">Monetary Freedom</th>
+            <th data-field="trade_freedom">Trade Freedom</th>
+            <th data-field="investment_freedom">Investment Freedom</th>
+            <th data-field="financial_freedom">Financial Freedom</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.js"></script>
+    
+    <script type="text/javascript">
+      $(table).bootstrapTable('refresh', {
+        url: "https://raw.githubusercontent.com/isadeveloper/database-trial/master/heritage_index_econ_freedom.json"
+      });
+
+    </script>
+  </body>
+
+
+
+
+</html>
