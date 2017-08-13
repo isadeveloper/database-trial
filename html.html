@@ -30,27 +30,7 @@
   </head>
   <body>
     <div class="container-main">
-      <table id="table" data-toggle="table" data-url= "/heritage_index_econ_freedom.json">
-        <thead>
-          <tr>
-            <th data-field="name">Name</th>
-            <th data-field="index_year">Index Year</th>
-            <th data-field="overall_score">Overall Score</th>
-            <th data-field="property_rights">Property Rights</th>
-            <th data-field="government_integrity">Government Integrity</th>
-            <th data-field="judicial_effectiveness">Judicial Effectiveness</th>
-            <th data-field="tax_burden">Tax Burden</th>
-            <th data-field="government_spending">Governtment Spending</th>
-            <th data-field="fiscal_health">Fiscal Health</th>
-            <th data-field="business_freedom">Business Freedom</th>
-            <th data-field="labour_freedom">Labour Freedom</th>
-            <th data-field="monetary_freedom">Monetary Freedom</th>
-            <th data-field="trade_freedom">Trade Freedom</th>
-            <th data-field="investment_freedom">Investment Freedom</th>
-            <th data-field="financial_freedom">Financial Freedom</th>
-          </tr>
-        </thead>
-      </table>
+      <table id="table"></table>
     </div>
 
    
@@ -59,7 +39,56 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.js"></script>
     
     <script type="text/javascript">
-     
+      
+     $('#table').bootstrapTable({
+    url: 'heritage_index_econ_freedom.json',
+    columns: [{
+        field: 'name',
+        title: 'Name'
+    }, {
+        field: 'index_year',
+        title: 'Index Year'
+    }, {
+        field: 'overall_score',
+        title: 'Overall Score'
+    }, {
+      field: 'property_rights',
+        title: 'Property Rights'
+    }, {
+      field: 'government_integrity',
+        title: 'Government Integrity'
+    }, {
+      field: 'judicial_effectiveness',
+        title: 'Judicial Effectiveness'
+    }, {
+      field: 'tax_burden',
+        title: 'Tax Burden'
+    }, {
+      field: 'government_spending',
+        title: 'Government Spending'
+    }, {
+      field: 'fiscal_health',
+        title: 'Fiscal Health'
+    }, {
+      field: 'business_freedom',
+        title: 'Business Freedom'
+    }, {
+      field: 'labour_freedom',
+        title: 'Labour Freedom'
+    }, {
+      field: 'monetary_freedom',
+        title: 'Monetary Freedom'
+    }, {
+      field: 'trade_freedom',
+        title: 'Trade Freedom'
+    }, {
+      field: 'investment_freedom',
+        title: 'Investment Freedom'
+    }, {
+      field: 'financial_freedom',
+        title: 'Financial Freedom'
+    }, ]
+});
 
     </script>
   </body>
