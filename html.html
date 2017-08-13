@@ -39,12 +39,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.js"></script>
     
     <script type="text/javascript">
-     $.ajax({
-       url: 'https://raw.githubusercontent.com/isadeveloper/database-trial/master/heritage_index_econ_freedom.json',
-       dataType: 'jsonp',
-       success: function(data) {
-           $('#table').bootstrapTable({
-               columns: [{
+       $.getJSON("https://raw.githubusercontent.com/isadeveloper/database-trial/master/heritage_index_econ_freedom.json", function (data) {
+        $('#table').bootstrapTable({
+          columns: [{
         field: 'name',
         title: 'Name'
     }, {
@@ -90,16 +87,9 @@
       field: 'financial_freedom',
         title: 'Financial Freedom'
     }, ]
-});
-       },
-       error: function(e) {
-           console.log(e.responseText);
-       }
-    });
- });
+      });
       
-     
-   
+
 
     </script>
   </body>
