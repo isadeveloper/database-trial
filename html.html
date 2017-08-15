@@ -11,7 +11,7 @@
         background-color: black;
       }
       
-      .container-main {
+      .container {
         background-color: lightgrey;
         margin-left:15%;
         margin-right:15%;
@@ -29,8 +29,29 @@
     </style>
   </head>
   <body>
-    <div class="container-main">
-      <table id="table"></table>
+    <div class="container">
+      <table id="table" data-toggle="table" data-url="heritage_index_econ_freedom.json" >
+        <thead>
+          <tr>
+            <th data-field="name">Name</th>
+            <th data-field="index_year">index_year</th>
+            <th data-field="overall_score">overall_score</th>
+            <th data-field="property_rights">property_rights</th>
+            <th data-field="government_integrity">property_rights</th>
+            <th data-field="judicial_effectiveness">judicial_effectiveness</th>
+            <th data-field="tax_burden">tax_burden</th>
+            <th data-field="government_spending">government_spending</th>
+            <th data-field="fiscal_health">fiscal_health</th>
+            <th data-field="business_freedom">business_freedom</th>
+            <th data-field="labour_freedom">labour_freedom</th>
+            <th data-field="monetary_freedom">monetary_freedom</th>
+            <th data-field="trade_freedom">trade_freedom</th>
+            <th data-field="investment_freedom">investment_freedom</th>
+            <th data-field="financial_freedom">financial_freedom</th>
+          </tr>
+        </thead>
+        
+      </table>
     </div>
 
    
@@ -39,59 +60,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.js"></script>
     
     <script type="text/javascript">
-       $.getJSON("https://raw.githubusercontent.com/isadeveloper/database-trial/master/heritage_index_econ_freedom.json", function (data) {
-        $('#table').bootstrapTable({
-          columns: [{
-        field: 'name',
-        title: 'Name'
-    }, {
-        field: 'index_year',
-        title: 'Index Year'
-    }, {
-        field: 'overall_score',
-        title: 'Overall Score'
-    }, {
-      field: 'property_rights',
-        title: 'Property Rights'
-    }, {
-      field: 'government_integrity',
-        title: 'Government Integrity'
-    }, {
-      field: 'judicial_effectiveness',
-        title: 'Judicial Effectiveness'
-    }, {
-      field: 'tax_burden',
-        title: 'Tax Burden'
-    }, {
-      field: 'government_spending',
-        title: 'Government Spending'
-    }, {
-      field: 'fiscal_health',
-        title: 'Fiscal Health'
-    }, {
-      field: 'business_freedom',
-        title: 'Business Freedom'
-    }, {
-      field: 'labour_freedom',
-        title: 'Labour Freedom'
-    }, {
-      field: 'monetary_freedom',
-        title: 'Monetary Freedom'
-    }, {
-      field: 'trade_freedom',
-        title: 'Trade Freedom'
-    }, {
-      field: 'investment_freedom',
-        title: 'Investment Freedom'
-    }, {
-      field: 'financial_freedom',
-        title: 'Financial Freedom'
-    }, ]
-      });
-       })
-      });
       
-
+     
 
     </script>
   </body>
